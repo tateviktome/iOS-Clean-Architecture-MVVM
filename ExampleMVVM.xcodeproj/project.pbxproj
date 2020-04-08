@@ -105,6 +105,26 @@
 		1FFFC834221B0041007D99D2 /* PosterImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC82C221B0041007D99D2 /* PosterImagesRepository.swift */; };
 		1FFFC835221B0041007D99D2 /* DefaultMoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC82F221B0041007D99D2 /* DefaultMoviesRepository.swift */; };
 		1FFFC836221B0041007D99D2 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC830221B0041007D99D2 /* MoviesRepository.swift */; };
+		99D5B6E0243CB1D300127C9B /* LoginSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6DF243CB1D300127C9B /* LoginSceneDIContainer.swift */; };
+		99D5B6E3243CB4EA00127C9B /* ConfigResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6E2243CB4EA00127C9B /* ConfigResponseStorage.swift */; };
+		99D5B6E5243CB52900127C9B /* ConfigResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6E4243CB52900127C9B /* ConfigResponseDTO+Mapping.swift */; };
+		99D5B6E7243CB63D00127C9B /* ConfigRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6E6243CB63D00127C9B /* ConfigRequestDTO+Mapping.swift */; };
+		99D5B6E9243CB7C200127C9B /* CoreDataConfigResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6E8243CB7C200127C9B /* CoreDataConfigResponseStorage.swift */; };
+		99D5B6EC243CB8D600127C9B /* ConfigResponseEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6EB243CB8D600127C9B /* ConfigResponseEntity+Mapping.swift */; };
+		99D5B6EE243CCA6A00127C9B /* SplashSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6ED243CCA6A00127C9B /* SplashSceneDIContainer.swift */; };
+		99D5B6F0243CCC3C00127C9B /* FetchConfigsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6EF243CCC3C00127C9B /* FetchConfigsUseCase.swift */; };
+		99D5B6F2243CCCA400127C9B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6F1243CCCA400127C9B /* Config.swift */; };
+		99D5B6F4243CD69E00127C9B /* ConfigsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6F3243CD69E00127C9B /* ConfigsRepository.swift */; };
+		99D5B6F6243CD8E400127C9B /* DefaultConfigsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6F5243CD8E400127C9B /* DefaultConfigsRepository.swift */; };
+		99D5B6FD243DC8F300127C9B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6FB243DC8F300127C9B /* SplashViewController.swift */; };
+		99D5B6FE243DC8F300127C9B /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D5B6FC243DC8F300127C9B /* SplashViewController.xib */; };
+		99D5B700243DC8FF00127C9B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B6FF243DC8FF00127C9B /* SplashViewModel.swift */; };
+		99D5B703243DD7D900127C9B /* SplashFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B702243DD7D900127C9B /* SplashFlowCoordinator.swift */; };
+		99D5B708243DEAE700127C9B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B707243DEAE700127C9B /* LoginViewModel.swift */; };
+		99D5B70B243DEAF700127C9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B709243DEAF700127C9B /* LoginViewController.swift */; };
+		99D5B70C243DEAF700127C9B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D5B70A243DEAF700127C9B /* LoginViewController.xib */; };
+		99D5B70E243DEB1500127C9B /* LoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B70D243DEB1500127C9B /* LoginFlowCoordinator.swift */; };
+		99D5B710243DEF6800127C9B /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5B70F243DEF6800127C9B /* LoginUseCase.swift */; };
 		FC2B715C2156FF93002BD59E /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B715B2156FF93002BD59E /* AppAppearance.swift */; };
 		FC740818216555C500FE52A5 /* UserDefaultsMoviesQueriesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC740817216555C500FE52A5 /* UserDefaultsMoviesQueriesStorage.swift */; };
 		FC74081A2165574400FE52A5 /* MovieQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7408192165574400FE52A5 /* MovieQuery.swift */; };
@@ -212,6 +232,26 @@
 		1FFFC82F221B0041007D99D2 /* DefaultMoviesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultMoviesRepository.swift; sourceTree = "<group>"; };
 		1FFFC830221B0041007D99D2 /* MoviesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		1FFFC83D221B02BA007D99D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ExampleMVVMTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		99D5B6DF243CB1D300127C9B /* LoginSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneDIContainer.swift; sourceTree = "<group>"; };
+		99D5B6E2243CB4EA00127C9B /* ConfigResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigResponseStorage.swift; sourceTree = "<group>"; };
+		99D5B6E4243CB52900127C9B /* ConfigResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		99D5B6E6243CB63D00127C9B /* ConfigRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
+		99D5B6E8243CB7C200127C9B /* CoreDataConfigResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfigResponseStorage.swift; sourceTree = "<group>"; };
+		99D5B6EB243CB8D600127C9B /* ConfigResponseEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigResponseEntity+Mapping.swift"; sourceTree = "<group>"; };
+		99D5B6ED243CCA6A00127C9B /* SplashSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSceneDIContainer.swift; sourceTree = "<group>"; };
+		99D5B6EF243CCC3C00127C9B /* FetchConfigsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchConfigsUseCase.swift; sourceTree = "<group>"; };
+		99D5B6F1243CCCA400127C9B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		99D5B6F3243CD69E00127C9B /* ConfigsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsRepository.swift; sourceTree = "<group>"; };
+		99D5B6F5243CD8E400127C9B /* DefaultConfigsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultConfigsRepository.swift; sourceTree = "<group>"; };
+		99D5B6FB243DC8F300127C9B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		99D5B6FC243DC8F300127C9B /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		99D5B6FF243DC8FF00127C9B /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		99D5B702243DD7D900127C9B /* SplashFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowCoordinator.swift; sourceTree = "<group>"; };
+		99D5B707243DEAE700127C9B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		99D5B709243DEAF700127C9B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99D5B70A243DEAF700127C9B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		99D5B70D243DEB1500127C9B /* LoginFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowCoordinator.swift; sourceTree = "<group>"; };
+		99D5B70F243DEF6800127C9B /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		FC2B715B2156FF93002BD59E /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		FC740817216555C500FE52A5 /* UserDefaultsMoviesQueriesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMoviesQueriesStorage.swift; sourceTree = "<group>"; };
 		FC7408192165574400FE52A5 /* MovieQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
@@ -300,6 +340,7 @@
 				1FFFC830221B0041007D99D2 /* MoviesRepository.swift */,
 				1FFFC828221B0041007D99D2 /* MoviesQueriesRepository.swift */,
 				1FFFC82C221B0041007D99D2 /* PosterImagesRepository.swift */,
+				99D5B6F3243CD69E00127C9B /* ConfigsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -335,6 +376,8 @@
 			children = (
 				1FA533D6201EF2B500747E55 /* AppDIContainer.swift */,
 				1FCE68A0222C873A00CC3074 /* MoviesSceneDIContainer.swift */,
+				99D5B6DF243CB1D300127C9B /* LoginSceneDIContainer.swift */,
+				99D5B6ED243CCA6A00127C9B /* SplashSceneDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -344,6 +387,8 @@
 			children = (
 				1F2AB95224278CC20010DEEE /* MoviesRequestDTO+Mapping.swift */,
 				1F2AB950242789B80010DEEE /* MoviesResponseDTO+Mapping.swift */,
+				99D5B6E4243CB52900127C9B /* ConfigResponseDTO+Mapping.swift */,
+				99D5B6E6243CB63D00127C9B /* ConfigRequestDTO+Mapping.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -511,6 +556,7 @@
 			children = (
 				1FA533B1201EE2A500747E55 /* Movie.swift */,
 				FC7408192165574400FE52A5 /* MovieQuery.swift */,
+				99D5B6F1243CCCA400127C9B /* Config.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -532,6 +578,8 @@
 			children = (
 				1F05A6CB2220A2CB001E2801 /* SearchMoviesUseCase.swift */,
 				1F84DECF23006BDA00139F73 /* FetchRecentMovieQueriesUseCase.swift */,
+				99D5B6EF243CCC3C00127C9B /* FetchConfigsUseCase.swift */,
+				99D5B70F243DEF6800127C9B /* LoginUseCase.swift */,
 				1F4102F2240BEE5800EC014A /* Protocol */,
 			);
 			path = UseCases;
@@ -598,6 +646,8 @@
 		1FE49D63230AA7C200D1D42E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				99D5B6F8243CE27400127C9B /* LoginScene */,
+				99D5B6F7243CE26800127C9B /* SplashScene */,
 				1FE49D7C230AA7C200D1D42E /* MoviesScene */,
 				1FC8B6E4230AF89A005DBF44 /* Utils */,
 			);
@@ -817,14 +867,104 @@
 				1FFFC82F221B0041007D99D2 /* DefaultMoviesRepository.swift */,
 				1FFFC827221B0041007D99D2 /* DefaultMoviesQueriesRepository.swift */,
 				1FFFC82B221B0041007D99D2 /* DefaultPosterImagesRepository.swift */,
+				99D5B6F5243CD8E400127C9B /* DefaultConfigsRepository.swift */,
 				1F6B52142363002C002FCDE9 /* Utils */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		99D5B6E1243CB4C900127C9B /* ConfigResponseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B6E2243CB4EA00127C9B /* ConfigResponseStorage.swift */,
+				99D5B6E8243CB7C200127C9B /* CoreDataConfigResponseStorage.swift */,
+				99D5B6EA243CB8B700127C9B /* EntityMapping */,
+			);
+			path = ConfigResponseStorage;
+			sourceTree = "<group>";
+		};
+		99D5B6EA243CB8B700127C9B /* EntityMapping */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B6EB243CB8D600127C9B /* ConfigResponseEntity+Mapping.swift */,
+			);
+			path = EntityMapping;
+			sourceTree = "<group>";
+		};
+		99D5B6F7243CE26800127C9B /* SplashScene */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B701243DD7C000127C9B /* Flows */,
+				99D5B6FA243CE33800127C9B /* ViewModel */,
+				99D5B6F9243CE33300127C9B /* View */,
+			);
+			path = SplashScene;
+			sourceTree = "<group>";
+		};
+		99D5B6F8243CE27400127C9B /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B706243DEAD500127C9B /* ViewModel */,
+				99D5B705243DEAD000127C9B /* View */,
+				99D5B704243DEACA00127C9B /* Flows */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		99D5B6F9243CE33300127C9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B6FB243DC8F300127C9B /* SplashViewController.swift */,
+				99D5B6FC243DC8F300127C9B /* SplashViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99D5B6FA243CE33800127C9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B6FF243DC8FF00127C9B /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		99D5B701243DD7C000127C9B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B702243DD7D900127C9B /* SplashFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		99D5B704243DEACA00127C9B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B70D243DEB1500127C9B /* LoginFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		99D5B705243DEAD000127C9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B709243DEAF700127C9B /* LoginViewController.swift */,
+				99D5B70A243DEAF700127C9B /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99D5B706243DEAD500127C9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99D5B707243DEAE700127C9B /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FC7408122165557500FE52A5 /* PersistentStorages */ = {
 			isa = PBXGroup;
 			children = (
+				99D5B6E1243CB4C900127C9B /* ConfigResponseStorage */,
 				1FFF12A22439F2AF00937EE4 /* MoviesResponseStorage */,
 				1FFF12A12439F2A300937EE4 /* MoviesQueriesStorage */,
 				1FFF12A52439F46000937EE4 /* CoreDataStorage */,
@@ -948,9 +1088,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D5B70C243DEAF700127C9B /* LoginViewController.xib in Resources */,
 				1FE49D89230AA7C200D1D42E /* MoviesListViewController.storyboard in Resources */,
 				1FF082B3239438DC00876A22 /* Localizable.strings in Resources */,
 				1FA53397201E1FDE00747E55 /* LaunchScreen.storyboard in Resources */,
+				99D5B6FE243DC8F300127C9B /* SplashViewController.xib in Resources */,
 				1FE49D88230AA7C200D1D42E /* MovieDetailsViewController.storyboard in Resources */,
 				1FA53394201E1FDE00747E55 /* Assets.xcassets in Resources */,
 				1FE49D86230AA7C200D1D42E /* MoviesQueriesTableViewController.storyboard in Resources */,
@@ -984,9 +1126,12 @@
 				1F16031D2426919300C173C6 /* AppFlowCoordinator.swift in Sources */,
 				1F53E2B823125F71008D6A05 /* MoviesQueryListItemViewModel.swift in Sources */,
 				FC2B715C2156FF93002BD59E /* AppAppearance.swift in Sources */,
+				99D5B6E7243CB63D00127C9B /* ConfigRequestDTO+Mapping.swift in Sources */,
 				1FFF12AA243A022300937EE4 /* MoviesResponseEntity+Mapping.swift in Sources */,
+				99D5B70E243DEB1500127C9B /* LoginFlowCoordinator.swift in Sources */,
 				1F1FC48922E3693100BCBA8D /* NetworkService.swift in Sources */,
 				1FA20490242F528E000C4B56 /* LoadingView.swift in Sources */,
+				99D5B6EC243CB8D600127C9B /* ConfigResponseEntity+Mapping.swift in Sources */,
 				1F4102F4240BEE6A00EC014A /* UseCase.swift in Sources */,
 				FC74081A2165574400FE52A5 /* MovieQuery.swift in Sources */,
 				1FFF12A72439FA9E00937EE4 /* CoreDataMoviesResponseStorage.swift in Sources */,
@@ -995,25 +1140,36 @@
 				1FA533E2201EF5F700747E55 /* APIEndpoints.swift in Sources */,
 				1F77930F222C0DF2004E034C /* StoryboardInstantiable.swift in Sources */,
 				1FE49D84230AA7C200D1D42E /* MoviesQueriesItemCell.swift in Sources */,
+				99D5B6F2243CCCA400127C9B /* Config.swift in Sources */,
 				1FF53EB423688893008D6CCC /* DataTransferError+ConnectionError.swift in Sources */,
 				1F53E2B623125896008D6A05 /* UIViewController+AddChild.swift in Sources */,
 				1F84DED023006BDA00139F73 /* FetchRecentMovieQueriesUseCase.swift in Sources */,
+				99D5B70B243DEAF700127C9B /* LoginViewController.swift in Sources */,
+				99D5B710243DEF6800127C9B /* LoginUseCase.swift in Sources */,
 				1FFF12A42439F2E700937EE4 /* MoviesResponseStorage.swift in Sources */,
+				99D5B6F0243CCC3C00127C9B /* FetchConfigsUseCase.swift in Sources */,
+				99D5B6F6243CD8E400127C9B /* DefaultConfigsRepository.swift in Sources */,
+				99D5B6F4243CD69E00127C9B /* ConfigsRepository.swift in Sources */,
 				1F2AB951242789B80010DEEE /* MoviesResponseDTO+Mapping.swift in Sources */,
 				1FFF1AD5243B966600937EE4 /* MoviesListItemViewModel.swift in Sources */,
 				1FC2C9632301FEC0001AE47E /* MovieQueryUDS+Mapping.swift in Sources */,
 				1FE49D90230AA7C200D1D42E /* MovieDetailsViewModel.swift in Sources */,
 				1F1FC48A22E3693100BCBA8D /* DataTransferService.swift in Sources */,
+				99D5B6E9243CB7C200127C9B /* CoreDataConfigResponseStorage.swift in Sources */,
 				1FEE31622218B17E00C160B9 /* Observable.swift in Sources */,
+				99D5B6EE243CCA6A00127C9B /* SplashSceneDIContainer.swift in Sources */,
 				1FFFC836221B0041007D99D2 /* MoviesRepository.swift in Sources */,
 				1F57F8D223C656F600981E09 /* AccessibilityIdentifier.swift in Sources */,
 				1F0CEFCF23436B67004141FA /* ConnectionError.swift in Sources */,
+				99D5B708243DEAE700127C9B /* LoginViewModel.swift in Sources */,
 				1F05A6CC2220A2CB001E2801 /* SearchMoviesUseCase.swift in Sources */,
 				1FA533D7201EF2B500747E55 /* AppDIContainer.swift in Sources */,
 				1F6B521323630016002FCDE9 /* RepositoryTask.swift in Sources */,
 				1F9034DF2307464700DEA4BD /* MoviesQueriesStorage.swift in Sources */,
 				1FE49D8A230AA7C200D1D42E /* MoviesListItemCell.swift in Sources */,
+				99D5B700243DC8FF00127C9B /* SplashViewModel.swift in Sources */,
 				1F1FC48B22E3693100BCBA8D /* Endpoint.swift in Sources */,
+				99D5B6E3243CB4EA00127C9B /* ConfigResponseStorage.swift in Sources */,
 				1FFFC831221B0041007D99D2 /* DefaultMoviesQueriesRepository.swift in Sources */,
 				1FD03807239098650016D05F /* CoreDataStorage.xcdatamodeld in Sources */,
 				1FE49D87230AA7C200D1D42E /* MovieDetailsViewController.swift in Sources */,
@@ -1024,7 +1180,9 @@
 				1FE49D8E230AA7C200D1D42E /* MoviesQueryListView.swift in Sources */,
 				1F9035272307528F00DEA4BD /* CoreDataMoviesQueriesStorage.swift in Sources */,
 				1FE49D92230AA7C200D1D42E /* MoviesListViewModel.swift in Sources */,
+				99D5B6FD243DC8F300127C9B /* SplashViewController.swift in Sources */,
 				1FB0903A2437651700DBE132 /* UIViewController+AddBehaviors.swift in Sources */,
+				99D5B6E0243CB1D300127C9B /* LoginSceneDIContainer.swift in Sources */,
 				1F5CE1CD242C303700A9CDE3 /* CoreDataStorage.swift in Sources */,
 				1FE49D85230AA7C200D1D42E /* MoviesQueriesTableViewController.swift in Sources */,
 				1F160324242693DD00C173C6 /* MoviesSearchFlowCoordinator.swift in Sources */,
@@ -1036,9 +1194,11 @@
 				1F2AB95324278CC20010DEEE /* MoviesRequestDTO+Mapping.swift in Sources */,
 				1F903535230759AC00DEA4BD /* MovieQueryEntity+Mapping.swift in Sources */,
 				1FE49D8F230AA7C200D1D42E /* MoviesQueryListViewModel.swift in Sources */,
+				99D5B703243DD7D900127C9B /* SplashFlowCoordinator.swift in Sources */,
 				1FB0903D243766C200DBE132 /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */,
 				1F1FC48C22E3693100BCBA8D /* NetworkConfig.swift in Sources */,
 				1FFFC834221B0041007D99D2 /* PosterImagesRepository.swift in Sources */,
+				99D5B6E5243CB52900127C9B /* ConfigResponseDTO+Mapping.swift in Sources */,
 				1FA5338D201E1FDE00747E55 /* AppDelegate.swift in Sources */,
 				1FA533B2201EE2A500747E55 /* Movie.swift in Sources */,
 			);
@@ -1207,7 +1367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1265,7 +1425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
 					"-weak_framework",

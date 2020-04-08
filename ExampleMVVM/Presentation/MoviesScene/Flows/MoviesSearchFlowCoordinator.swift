@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MoviesSceneCoordinationProtocol: class {
+    func didFinishMoviesScene()
+}
+
 protocol MoviesSearchFlowCoordinatorDependencies  {
     func makeMoviesListViewController(closures: MoviesListViewModelClosures) -> MoviesListViewController
     func makeMoviesDetailsViewController(movie: Movie) -> UIViewController

@@ -32,4 +32,12 @@ struct APIEndpoints {
                         method: .get,
                         responseDecoder: RawDataResponseDecoder())
     }
+    
+    static func getConfigs(with configRequestDTO: ConfigRequestDTO) -> Endpoint<ConfigResponseDTO> {
+
+        return Endpoint(path: "http://www.mocky.io/v2/5e8c6e252f00002b0088caf7",
+                        isFullPath: true,
+                        method: .get,
+                        queryParametersEncodable: configRequestDTO)
+    }
 }

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ConfigRequestEntity" representedClassName="ConfigRequestEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConfigResponseEntity" inverseName="request" inverseEntity="ConfigResponseEntity"/>
+    </entity>
+    <entity name="ConfigResponseEntity" representedClassName="ConfigResponseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="avg_time" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String"/>
+        <attribute name="idd" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isHasData" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConfigRequestEntity" inverseName="response" inverseEntity="ConfigRequestEntity"/>
+    </entity>
     <entity name="MovieQueryEntity" representedClassName="MovieQueryEntity" syncable="YES" codeGenerationType="class">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="query" optional="YES" attributeType="String"/>
@@ -28,5 +38,7 @@
         <element name="MovieResponseEntity" positionX="7183.984375" positionY="-567.76171875" width="128" height="133"/>
         <element name="MoviesRequestEntity" positionX="6822.30859375" positionY="-559.6484375" width="128" height="88"/>
         <element name="MoviesResponseEntity" positionX="6993.70703125" positionY="-578.1640625" width="128" height="103"/>
+        <element name="ConfigResponseEntity" positionX="7002" positionY="-603" width="128" height="118"/>
+        <element name="ConfigRequestEntity" positionX="7011" positionY="-594" width="128" height="58"/>
     </elements>
 </model>

@@ -32,4 +32,14 @@ final class AppDIContainer {
                                                                imageDataTransferService: imageDataTransferService)
         return MoviesSceneDIContainer(dependencies: dependencies)
     }
+    
+    func makeSplashDIContainer() -> SplashSceneDIContainer {
+        let dependencies = SplashSceneDIContainer.Dependencies(apiDataTransferService: apiDataTransferService)
+        return SplashSceneDIContainer(dependencies: dependencies)
+    }
+    
+    func makeLoginDIContainer() -> LoginSceneDIContainer {
+        let dependencies = LoginSceneDIContainer.Dependencies(apiDataTransferService: apiDataTransferService)
+        return LoginSceneDIContainer(dependencies: dependencies)
+    }
 }

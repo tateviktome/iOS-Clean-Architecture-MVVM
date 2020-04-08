@@ -19,8 +19,36 @@ class AppFlowCoordinator {
     }
     
     func start() {
+        self.showSplash()
+    }
+    
+    func showMovies() {
         let moviesSceneDIContainer = appDIContainer.makeMoviesSceneDIContainer()
         let flow = moviesSceneDIContainer.makeMoviesSearchFlowCoordinator(navigationController: navigationController)
         flow.start()
+    }
+    
+    func showLogin() {
+        let loginDIContainer = appDIContainer.makeLoginDIContainer()
+        let flow = loginDIContainer.makeLoginFlowCoordinator(navigationController: navigationController)
+        flow.delegate = self
+        flow.start()
+    }
+    
+    func showSplash() {
+        let sceneDIContainer = appDIContainer.makeSplashDIContainer()
+        let flow = sceneDIContainer.makeSplashFlowCoordinator(navigationController: navigationController)
+        flow.delegate = self
+        flow.start()
+    }
+}
+
+extension AppFlowCoordinator: SplashSceneCoordinationProtocol, LoginSceneCoordinationProtocol {
+    func didFinishSplash() {
+        self.showLogin()
+    }
+    
+    func didFinishLogin() {
+        self.showMovies()
     }
 }
