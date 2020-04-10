@@ -10,9 +10,9 @@ import Foundation
 final class DefaultConfigsRepository {
 
     private let dataTransferService: DataTransferService
-    private let cache: ConfigResponseStorage
+    private let cache: CoreDataResponseStorage<ConfigRequestDTO, ConfigResponseDTO, ConfigResponseEntity, ConfigRequestEntity>
 
-    init(dataTransferService: DataTransferService, cache: ConfigResponseStorage) {
+    init(dataTransferService: DataTransferService, cache: CoreDataResponseStorage<ConfigRequestDTO, ConfigResponseDTO, ConfigResponseEntity, ConfigRequestEntity>) {
         self.dataTransferService = dataTransferService
         self.cache = cache
     }

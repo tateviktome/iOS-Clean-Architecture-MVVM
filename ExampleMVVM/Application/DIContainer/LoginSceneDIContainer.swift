@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 final class LoginSceneDIContainer: LoginFlowCoordinatorDependencies {
     
@@ -17,7 +18,10 @@ final class LoginSceneDIContainer: LoginFlowCoordinatorDependencies {
     private let dependencies: Dependencies
 
     // MARK: - Persistent Storage
-    lazy var configQueriesStorage: ConfigResponseStorage = CoreDataConfigResponseStorage()
+    lazy var configQueriesStorage = CoreDataResponseStorage<ConfigRequestDTO, ConfigResponseDTO, ConfigResponseEntity, ConfigRequestEntity>(coreDataStorage: CoreDataStorage(), fetchRequestClosure: { _ in
+        let request: NSFetchRequest = ConfigRequestEntity.fetchRequest()
+        return request
+    })
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
