@@ -50,6 +50,8 @@ extension CoreDataResponseStorage: ResponseStorage {
 
                 if let item = result?.getResponseDTO() {
                     completion(.success(item as? Response))
+                } else {
+                    completion(.success(nil))
                 }
             } catch {
                 completion(.failure(CoreDataStorageError.readError(error)))

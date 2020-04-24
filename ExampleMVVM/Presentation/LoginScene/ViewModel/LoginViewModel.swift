@@ -56,7 +56,8 @@ class LoginViewModel: LoginViewModelInput, LoginViewModelOutput {
             switch result {
             case .success:
                 self.closures.closeLogin()
-            case .failure: break
+            case .failure:
+                self.closures.closeLogin() // for test
             }
         }
     }
