@@ -38,4 +38,9 @@ class MoviesSceneUITests: XCTestCase {
         XCTAssertTrue(app.otherElements[AccessibilityIdentifier.movieDetailsView].waitForExistence(timeout: 5))
         XCTAssertTrue(app.navigationBars[searchText].waitForExistence(timeout: 5))
     }
+    
+    func testOpenMovieDetails_whenSearchBatmanAndTapOnFirstResultRow_thenMovieDetailsViewOpensWithTitleBatmann() {
+                
+        
+    }
 }

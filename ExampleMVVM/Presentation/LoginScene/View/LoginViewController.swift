@@ -11,6 +11,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    
     var viewModel: LoginViewModel!
     
     static func create(with viewModel: LoginViewModel) -> LoginViewController {

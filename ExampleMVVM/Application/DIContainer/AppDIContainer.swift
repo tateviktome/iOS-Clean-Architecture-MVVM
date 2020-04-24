@@ -18,6 +18,7 @@ final class AppDIContainer {
                                                             "language": NSLocale.preferredLanguages.first ?? "en"])
         
         let apiDataNetwork = DefaultNetworkService(config: config)
+        apiDataNetwork.responseMiddlewares = [Middlewares.error, Middlewares.maintenance]
         return DefaultDataTransferService(with: apiDataNetwork)
     }()
     lazy var imageDataTransferService: DataTransferService = {

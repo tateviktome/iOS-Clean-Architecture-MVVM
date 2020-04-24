@@ -12,6 +12,8 @@
             <connections>
                 <outlet property="descriptionLabel" destination="1KD-gY-AEg" id="Q9C-PQ-jgX"/>
                 <outlet property="loginButton" destination="9VH-ZN-RGV" id="5c9-zh-yut"/>
+                <outlet property="passwordTextField" destination="GMP-5e-0UN" id="SpG-uP-NbB"/>
+                <outlet property="usernameTextField" destination="OzY-p9-qgc" id="9gx-jB-2fa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,13 +35,29 @@
                         <action selector="loginButtonPressed" destination="-1" eventType="touchUpInside" id="Olm-Iw-dqz"/>
                     </connections>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OzY-p9-qgc">
+                    <rect key="frame" x="20" y="482" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-5e-0UN">
+                    <rect key="frame" x="20" y="524" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="OzY-p9-qgc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0tw-YV-rDn"/>
+                <constraint firstItem="GMP-5e-0UN" firstAttribute="top" secondItem="OzY-p9-qgc" secondAttribute="bottom" constant="8" id="64d-Al-2nh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9VH-ZN-RGV" secondAttribute="bottom" constant="40" id="9kG-BD-CKR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OzY-p9-qgc" secondAttribute="trailing" constant="20" id="KCn-oI-Bka"/>
                 <constraint firstItem="1KD-gY-AEg" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Xd1-rF-QEG"/>
                 <constraint firstItem="9VH-ZN-RGV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="c1m-gs-cmJ"/>
+                <constraint firstItem="OzY-p9-qgc" firstAttribute="top" secondItem="1KD-gY-AEg" secondAttribute="bottom" constant="18.5" id="en5-uT-NBh"/>
                 <constraint firstItem="1KD-gY-AEg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hkB-C2-vvq"/>
+                <constraint firstItem="GMP-5e-0UN" firstAttribute="leading" secondItem="OzY-p9-qgc" secondAttribute="leading" id="kQn-Fl-4sT"/>
+                <constraint firstItem="GMP-5e-0UN" firstAttribute="trailing" secondItem="OzY-p9-qgc" secondAttribute="trailing" id="rwa-c1-qDM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="141"/>

@@ -29,13 +29,17 @@ final class LoginSceneDIContainer: LoginFlowCoordinatorDependencies {
     
     // MARK: - Use Cases
     
-    func makeLoginUseCase(completion: @escaping (LoginUseCase.ResultValue) -> Void) -> UseCase {
-        return LoginUseCase(completion: completion, configsRepository: makeConfigsRepository())
+    func makeLoginUseCase(completion: @escaping (LoginUseCase.ResultValue) -> Void) -> LoginUseCase {
+        return LoginUseCase(completion: completion, configsRepository: makeConfigsRepository(), loginRepository: makeLoginRepository())
     }
     
     // MARK: - Repositories
     func makeConfigsRepository() -> ConfigsRepository {
         return DefaultConfigsRepository(dataTransferService: dependencies.apiDataTransferService, cache: configQueriesStorage)
+    }
+    
+    func makeLoginRepository() -> LoginRepository {
+        return DefaultLoginRepository(dataTransferService: dependencies.apiDataTransferService)
     }
     
     // MARK: - Splash

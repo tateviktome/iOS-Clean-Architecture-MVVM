@@ -8,7 +8,7 @@
 import Foundation
 
 typealias LoginUseCaseFactory = (@escaping (LoginUseCase.ResultValue) -> Void
-    ) -> UseCase
+    ) -> LoginUseCase
 
 struct LoginViewModelClosures {
     let closeLogin: () -> Void
@@ -25,8 +25,11 @@ protocol LoginViewModelOutput {
 
 class LoginViewModel: LoginViewModelInput, LoginViewModelOutput {
     var title: Observable<String> = Observable("")
+    var username: Observable<String> = Observable("")
+    var password: Observable<String> = Observable("")
     var factory: LoginUseCaseFactory
     var closures: LoginViewModelClosures
+    var useCase: LoginUseCase!
     
     init(useCase: @escaping LoginUseCaseFactory, closures: LoginViewModelClosures) {
         self.closures = closures
@@ -41,11 +44,20 @@ class LoginViewModel: LoginViewModelInput, LoginViewModelOutput {
             case .failure: break
             }
         }
-        let useCase = factory(completion)
+        useCase = factory(completion)
         useCase.start()
     }
     
     func loginButtinPress() {
-        closures.closeLogin()
+        let loginBody = LoginBody()
+        loginBody.password = password.value
+        loginBody.username = username.value
+        self.useCase.login(body: loginBody) { (result) in
+            switch result {
+            case .success:
+                self.closures.closeLogin()
+            case .failure: break
+            }
+        }
     }
 }

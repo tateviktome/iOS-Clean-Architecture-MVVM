@@ -48,6 +48,8 @@ public final class DefaultNetworkService {
     private let sessionManager: NetworkSessionManager
     private let logger: NetworkErrorLogger
     
+    public var responseMiddlewares: [(MiddlewareResponse) -> MiddlewareResult] = []
+    
     public init(config: NetworkConfigurable,
                 sessionManager: NetworkSessionManager = DefaultNetworkSessionManager(),
                 logger: NetworkErrorLogger = DefaultNetworkErrorLogger()) {
@@ -59,6 +61,17 @@ public final class DefaultNetworkService {
     private func request(request: URLRequest, completion: @escaping CompletionHandler) -> NetworkCancellable {
         
         let sessionDataTask = sessionManager.request(request) { data, response, requestError in
+            let middlewareResponse = MiddlewareResponse(body: data,
+                                                        request: request,
+                                                        response: response as? HTTPURLResponse)
+            
+            for middleware in self.responseMiddlewares {
+                let result = middleware(middlewareResponse)
+                switch result {
+                case .continue: break
+                case .abort: return
+                }
+            }
             
             if let requestError = requestError {
                 var error: NetworkError

@@ -7,17 +7,27 @@
 
 import Foundation
 
-class LoginUseCase: UseCase {
+protocol LoginCase: UseCase {
+    @discardableResult
+    func login(body: LoginBody, completion: ((Result<LoginResponse, Error>) -> Void)?) -> Cancellable?
+    
+    //
+}
+
+class LoginUseCase: LoginCase {
     typealias ResultValue = (Result<Config, Error>)
 
     private let completion: (ResultValue) -> Void
     private let configsRepository: ConfigsRepository
+    private let loginRepository: LoginRepository
 
     init(completion: @escaping (ResultValue) -> Void,
-         configsRepository: ConfigsRepository) {
+         configsRepository: ConfigsRepository,
+         loginRepository: LoginRepository) {
 
         self.completion = completion
         self.configsRepository = configsRepository
+        self.loginRepository = loginRepository
     }
     
     func start() -> Cancellable? {
@@ -25,5 +35,11 @@ class LoginUseCase: UseCase {
             self.completion(result)
         }
         return nil
+    }
+    
+    func login(body: LoginBody, completion: ((Result<LoginResponse, Error>) -> Void)?) -> Cancellable? {
+        loginRepository.login(body: body) { (result) in
+            completion?(result)
+        }
     }
 }

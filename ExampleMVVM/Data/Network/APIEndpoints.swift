@@ -40,4 +40,12 @@ struct APIEndpoints {
                         method: .get,
                         queryParametersEncodable: configRequestDTO)
     }
+    
+    static func doLogin(with body: LoginBody) -> Endpoint<LoginResponse> {
+
+        return Endpoint(path: "http://www.mocky.io/v2/5e8c6e252f00002b0088caf743",
+                        isFullPath: true,
+                        method: .post,
+                        queryParametersEncodable: body)
+    }
 }
